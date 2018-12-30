@@ -78,8 +78,8 @@ Benchmark (AAPL):<br>
 CR:  2.0926   ADR:  0.0464   SDDR:  3.0535   SR:  0.2411<br>
 
 ### References: <br>
-<a href="https://www.tradingview.com/wiki/Bollinger_Bands_%25B_(%25B)" target="_blank">Georgia Tech CS 7646 under Prof. Tucker Balch</a><br>
-<a href="https://www.tradingview.com/wiki/Bollinger_Bands_%25B_(%25B)" target="_blank">Udacity Machine Learning for trading</a><br>
+<a href="https://quantsoftware.gatech.edu/CS7646_Fall_2018" target="_blank">Georgia Tech CS 7646 under Prof. Tucker Balch</a><br>
+<a href="https://classroom.udacity.com/courses/ud501" target="_blank">Udacity Machine Learning for trading</a><br>
 Dataset:<br>
 <a href="https://www.kaggle.com/borismarjanovic/price-volume-data-for-all-us-stocks-etfs" target="_blank">Kaggle - Huge Stock Market Dataset</a><br>
 
