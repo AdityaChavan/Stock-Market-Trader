@@ -67,7 +67,7 @@ class StrategyLearner(object):
         Y=Y[10:]
         Y_df=np.array(Y)
         
-        print X.shape,Y_df.shape
+        #print X.shape,Y_df.shape
         
         
         self.learner.addEvidence(X, Y_df)    
