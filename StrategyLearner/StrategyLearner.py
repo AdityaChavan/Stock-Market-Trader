@@ -32,14 +32,18 @@ class StrategyLearner(object):
         price=  ut.get_data([symbol],pd.date_range(sd,ed))  
         sma,bbp,mom=indicators(symbol,sd,ed)	   	  		
         
-        Y=np.zeros(price.shape[0])
+            
         N=10 #N day return 
         
+        Y=np.zeros(price.shape[0])
         
         
         for t in range(price.shape[0]-N):
           ret = (price.ix[t+N,symbol]/price.ix[t,symbol]) - 1.0
           Y[t]=ret
+        #print Y.shape#996 1006
+        
+        
         
         margin=np.amax(Y)-np.amin(Y)
         imp=min(10*self.impact,0.2)
@@ -56,9 +60,15 @@ class StrategyLearner(object):
               Y[t] = 0 # CASH
         
 
-        Y_df=np.array(Y)
+
         X=np.array([bbp,mom,sma])
         X=np.transpose(X)
+        X=X[10:]
+        Y=Y[10:]
+        Y_df=np.array(Y)
+        
+        print X.shape,Y_df.shape
+        
         
         self.learner.addEvidence(X, Y_df)    
         self.learner2.addEvidence(X, Y_df)    

@@ -32,14 +32,18 @@ if __name__=="__main__":
     
     sym='AAPL'
     sv=100000
-    sd=dt.datetime(2004,1,1)
-    ed=dt.datetime(2007,12,31)
+    sd=dt.datetime(2008,1,1)#start date
+    ed=dt.datetime(2011,12,31)#end date
+    price=  util.get_data([sym],pd.date_range(sd,ed))     
+    #print price
+    
     
     ###Strategy Learner
     learner = st.StrategyLearner(verbose=False)    
     learner.addEvidence(sym,sd,ed,sv) # train it  		   	  			    		  		  		    	 		 		   		   
-    sd=dt.datetime(2008,1,1)
-    ed=dt.datetime(2011,12,31)
+    
+#    sd=dt.datetime(2008,1,1)
+#    ed=dt.datetime(2011,12,31)
     trade_rf,trade_dt=learner.testPolicy(sym,sd,ed,sv)
     print "\nRandom Forest\n"
     portval1=compute_portvals(sym,trade_rf,commission=0,impact=0.001,start_val=sv)
@@ -73,7 +77,6 @@ if __name__=="__main__":
     plt.plot(df_temp)
     plt.legend([ 'CNN','Decision Trees','Random Forest','Stock-AAPL'])
     plt.savefig('Experiment-1.png')  
-    
     
     
     	  			    		  		  		    	 		 		   		
