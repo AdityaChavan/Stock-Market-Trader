@@ -32,12 +32,14 @@ if __name__=="__main__":
     
     sym='AAPL'
     sv=100000
-    sd=dt.datetime(2008,1,1)
-    ed=dt.datetime(2011,12,31)
+    sd=dt.datetime(2004,1,1)
+    ed=dt.datetime(2007,12,31)
     
     ###Strategy Learner
     learner = st.StrategyLearner(verbose=False)    
     learner.addEvidence(sym,sd,ed,sv) # train it  		   	  			    		  		  		    	 		 		   		   
+    sd=dt.datetime(2008,1,1)
+    ed=dt.datetime(2011,12,31)
     trade_rf,trade_dt=learner.testPolicy(sym,sd,ed,sv)
     print "\nRandom Forest\n"
     portval1=compute_portvals(sym,trade_rf,commission=0,impact=0.001,start_val=sv)
