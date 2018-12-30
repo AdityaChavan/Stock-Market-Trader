@@ -1,6 +1,6 @@
 # Stock-Market-Trader
 A program to create a strategy to trade in the stock market. ML Algorithms: Random Forest, Decision Trees and also a Convolutional Neural Network (TensorFlow) were implemented and their performance compared.
-The result indicates that the predicted strategy outperforms just buying a stock and holding it. The best strategy, the CNN outputs a strategy that would have multiplied the portfolio 6.7 times in 4 years time, compared to 2.1 times by buying the stock.
+The result indicates that the predicted strategy outperforms just buying a stock and holding it. The best algorithm, the CNN outputs a strategy that would have multiplied the portfolio 6.7 times in 4 years time, compared to 2.1 times by buying the stock.
 
 Shown below are the outputs of the program:
 ![alt text](https://github.com/AdityaChavan/Stock-Market-Trader/blob/master/Experiment-1.png)
@@ -91,4 +91,4 @@ How to run:
 Written in Python 2.7
 Dependencies: Numpy, Pandas, TensorFlow, TFLearn, Matplotlib
 
-Disclaimer: Do not trade based on this strategy. Real world volatility, commissions and impact will affect gains.
+Disclaimer: Do not trade based on this strategy. 
